@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Home - Clonakilty Bookshop</title>
+    <meta charset='utf-8'>
+    <meta name="description" content="Clonakilty Bookshop's new website is now live! Come visit us in 12 Pearse Street, Clonakilty, Co. Cork">
+    <meta name="keywords" content="Clonakilty Irish Bookshop Cork Home Page">
+    <meta name="author" content="Aoife Sayers">
+ <meta name="viewport" content="width=device-width" />
+
+
+ 
+ <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+
+ <script type="text/javascript">
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    
+       
+  </script>    
+<style type="text/css">
+@media all {
+
+/*Nav Bar*/
+    
+  .header {
+    height:50px;
+    background:#333;
+    width: 100%;
+    margin:0px;
+    position: relative; 
+    z-index: 4;
+    }
+    
+  .header-cont {
+    width:100%;
+    height: 57px; 
+    position:fixed;
+    background-color: #333;
+    top:0px;
+    }
+    .header-cont ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    .header-cont  li{
+      display: inline-block;
+    }
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.hamburger:active {
+background-color: #ccc;}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: none;
+    line-height: 25px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    transition: 0.3s;
+    line-height: 25px;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+
+.dropbtn:hover {
+border-bottom: 10px solid #068894;
+ transition: 0.5s;}
+
+.fullMenu:hover {
+border-bottom: 10px solid #068894;
+ transition: 0.5s;}
+
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+     transition: 0.5s;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+   background-color: black;
+   }
+
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    font-size: 0.9em;
+    display: none;
+    position: absolute;
+    color: #333;
+    min-width: 160px;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.iconGroup a img:hover {
+border: 3px solid #ccc;
+border-radius: 50%;
+}
+.iconGroup a img:active {
+border: 3px solid #ccc;
+border-radius: 50%;
+}
+
+
+
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+border-left: 10px solid #068894;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+body{
+margin: 0px;
+padding: 0px;
+width: 100%;
+height: 100%;
+background-color: #140A00;
+font-family:   'Open Sans', sans-serif;
+color: white;
+}
+
+.highlight{
+color: orange
+}
+
+
+#box1 li{
+line-height: 1.8em;
+list-style-type: square;
+}
+#box1 a{
+color: #fff;
+}
+#box1 li a:hover{
+color: white;
+font-weight:bold;
+background-color: orange;
+padding: 2% 5% 2% 5%;
+border-radius: 5px;}
+
+#viewmorelink a{
+width: 50%;
+margin-top: 3%;
+background-color: orange;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+text-align: center;
+padding: 4%;
+padding-top: 3%;
+padding-bottom: 3%;
+text-transform: uppercase;
+font-weight: bold;
+position: absolute;
+left: 20%;
+bottom: 0%;
+}
+
+
+#viewmorelink a:hover {
+background-color: white;
+  border: 5px #ccc solid;
+   border-style: outset;
+   color: #ccc;
+  
+}
+
+   
+#box2{
+position: relative;
+background-color: #433B33;
+border: 1px solid orange;
+float: right;
+width: 50%;
+height: 400px;
+border-radius: 15px;
+float: left;
+margin: 5%;
+clear: right;
+}
+
+
+img{
+}
+
+
+#box3{
+position: relative;
+background-color: #433B33;
+border: 1px solid orange;                        
+width: 30%;
+height: 350px;
+border-radius: 15px;
+float: left;
+margin: 4%;
+margin-left: 4%;
+overflow: auto;
+}
+
+table {
+  width:90%;
+  margin: 0 auto;
+  padding: 0;
+  border-collapse: collapse;
+  background: #FFFFCC;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  position: absolute;
+  }
+td {
+  border: 1px solid orange;
+  padding: 0.25em;
+  color: black;
+  }
+th {
+  border: 1px solid orange;
+  padding: 4px;
+  background: #fc6;
+  color: #808066;
+  }
+.days {
+  font-weight: bold;
+   background: gray;
+  }
+.tablett a{
+color: white;
+font-weight: bold;
+}
+.tablett p{
+margin-left: 10%;
+}
+
+.tablett a:hover{
+background-color: orange;
+border-radius: 5px;
+padding-left: 3%;
+padding-right: 3%;}
+
+
+#box4{
+position: relative;
+background-color: #433B33;
+border: 1px solid orange;
+float: right;
+width: 50%;
+height: 350px;
+border-radius: 15px;
+float: left;
+margin: 4%;
+clear: right;
+overflow: auto;
+} 
+#box4 a{
+color: white;
+}
+#box4 a:hover {
+font-weight: bold;
+background-color: orange;
+padding: 1% 2% 1% 2%;
+border-radius: 5px;
+}
+.align{
+margin-left: 4.5%;
+}
+#footer{
+position: relative;
+background-color: #433B33;
+border-top: 5px solid orange;
+width: 100%;
+height: 700px;
+top: 100%;
+margin: 0px;
+}
+.footerinfo{
+position: absolute;
+float: left;
+color: gray;
+margin: 2%;
+}
+.footerinfo a{
+color: gray;
+}
+.footerinfo a:hover{
+color: white;
+}
+.sitemap{
+position: absolute;
+right: 10%;
+color: gray;
+}
+
+.sitemap a{
+color: gray;
+line-height: 1.8em;
+}
+
+.sitemap a:hover{
+color: white;
+font-weight:bold;
+background-color: orange;
+padding: 2% 5% 2% 5%;
+border-radius: 5px;}
+
+.sitemap li{
+list-style-type: square;}
+
+.SitemapR{
+display: none;}
+#wrapper{
+width: 100%;
+margin: 0px;
+height: 1100px;
+margin-right: 0px;
+}    
+
+#box1{  
+position: relative;
+background-color: #433B33;
+border: 1px solid orange;                        
+width: 30%;
+height: 400px;
+border-radius: 15px;
+float: left;
+margin: 4%;
+margin-left: 4%;
+
+}
+div.background{
+  width: 100%;
+  height: 400px;
+  background:url(large.png); 
+  border-bottom: 5px solid orange;
+  background-size: cover;
+  position: relative;
+  }
+ 
+  div.transbox{
+  width: 35% auto;
+  height: 20% auto;
+  margin 30px 50px;
+  background-color: black;
+  border 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  border-radius: 25px; 
+  padding-left: 25px;
+  padding-right: 25px;
+  }
+  
+  div.transbox p
+  {
+  margin: 20px 20px;
+  font-weight: bold;
+  color: white;
+ 
+  }
+  
+    
+.menu-container .menu-button{
+display:none;
+}
+
+a, a:link, a:visited, a:hover {
+    
+    text-decoration: none;
+    
+  }
+  
+  .menu-container{
+  margin: 0 auto;
+  margin-left: 5%;
+  padding 0px;
+  width:100%;
+  height: 400px;
+ position: absolute;
+ top: 88%;
+ clear: below;}
+ 
+  .menu-container a {
+    background: orange; 
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    -moz-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    text-align: center;
+    text-transform: uppercase;
+  }
+ 
+  .menu-container .active {
+    background: #FFD700;
+    color: white;
+  }
+ 
+  .menu-container a:hover,
+  .menu-container .active:hover {
+  background-color: white;
+  color:#ccc;
+  border: 5px #ccc solid;
+   border-style: outset;
+
+  }
+ 
+  /* Responsive Menu Button */
+ 
+  .menu-container .menu-button {
+    background: orange;
+    margin-left: 25%;
+    position: absolute;
+    width: 50%;
+    
+  } 
+  }
+ 
+  /* Responsive */
+ 
+  @media all and (max-width: 550px) {
+  
+      .menuButton {
+ display: block;
+ position: fixed;
+top: 0px;
+left: 0px;
+}
+.fullMenu{
+display: none;}
+
+ .sidenav {
+ display: block;
+ padding-top: 15px;
+ }
+  .sidenav a {
+  color: white;
+  font-size: 18px;
+  }
+  
+    .sidenav a:hover {
+  background-color: black;
+  margin-left: 30px;
+ }
+    
+   .sideHighlight:hover {
+  border-bottom: 10px #068894 solid;}
+   .sideNavSub {
+ margin-left: 15%;
+ font-size: 0.5em;
+ }
+ 
+  .sideNavSub:hover {
+ border-left: 10px #068894 solid;
+ margin-left: 50%;
+ }
+ 
+    .menu-container {
+      width: 80%;
+	  margin: 0 auto;
+    clear: below; }
+	  
+	  
+    #box1 {
+    width: 70%;
+    clear: right;
+    margin-left: 15%;
+    }
+    #box2 {
+     width: 70%;
+     height: 200px;
+    clear: right;
+    margin-left: 15%;
+    overflow: auto;
+    }
+      #box3 {
+     width: 70%;
+    clear: right;
+    margin-left: 15%;
+    height: 150px;
+    }
+    
+     #box4 {
+     width: 70%;
+     overflow: auto;
+    clear: right;
+    margin-left: 15%;
+    height: 500px;
+    }
+    #content {
+    height: 1300px;}
+    .menu-container .menu-button {
+      display: block;
+    }
+ 
+    .menu-container .menu {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      
+     
+      -moz-transition: opacity 1s ease-out;
+      -o-transition: opacity 1s ease-out;
+      -webkit-transition: opacity 1s ease-out;
+      transition: opacity 1s ease-out;   
+      width: 100%;
+    }
+ 
+    .menu a {
+      display: block;
+      margin: 1px 0;
+    }
+ 
+    #menu:target .menu {
+      opacity: 1; 
+      height: auto;
+	
+    }
+ 
+    #menu:target .menu-button {
+      display: none;
+      
+    }
+    
+    .hideme{
+    
+    display:none;
+    float:none;
+    }
+    .mobilecollapse{
+    
+    width:100%;
+    clear:all;
+    float:none;
+    }
+    
+    #box1 li{
+    list-style-type: none;}
+    
+    .tablett{
+display: block;}
+
+table{
+display: none;}
+
+#box2 img{
+display: none;}
+
+#box1{
+overflow: auto;}
+.hidefb{
+display: none;}
+
+.sitemap{
+display: none;
+}
+
+#footer{
+margin-top: 100%;
+height: 150px;
+}
+ #menu:target .menu {
+ }
+  }
+  
+  
+    
+
+
+    
+  </style>
+  </head>
+  <body onload="closeNav();">
+<div id="wrapper">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="header">
+<div class="header-cont">
+<a href="index.html"><img src="../images/myIcon.svg" alt="logo" top="0" width="100" style="margin-left: 75px; margin-top: -3px; position: absolute;"></a>
+<ul style="margin-left: 36%;">
+  <li><a class="fullMenu" href="\..\index.html#Home"> Home</a></li>
+  <li><a href="\..\index.html#About" class="fullMenu">About</a></li>
+  <li class="dropdown">
+    <a href="\..\index.html#Portfolio" class="fullMenu">Portfolio</a>
+    <div class="dropdown-content">
+      <a href="\..\index.html#Programming">Programming</a>
+      <a href="\..\index.html#WebDev">Web Development</a>
+      <a href="\..\index.html#Design">Design</a>
+      <a href="\..\index.html#Home">Networking</a>
+    </div>
+  </li>
+  <li><a class="fullMenu" href="\..\index.html#Contact">Contact</a></li>
+</ul>
+
+
+</div>
+<ul>
+ <li>
+  <a class="menuButton" onclick="openNav()" href="#">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div></a>
+</li>
+</ul> 
+<div id="mySidenav" class="sidenav" style="width: 250px;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a style="margin-top: 15%;" onclick="closeNav()" class="sideHighlight" href="#Home">Home</a>
+  <a href="#About" class="sideHighlight" onclick="closeNav()">About</a>
+  <a href="#Portfolio" class="sideHighlight" onclick="closeNav()">Portfolio</a>
+  <a href="#Programming" class="sideNavSub" onclick="closeNav()">Programming</a>
+  <a href="#WebDev" class="sideNavSub" onclick="closeNav()">Web Development</a>
+  <a href="#Design" class="sideNavSub" onclick="closeNav()">Design</a>
+  <a href="#Contact" class="sideHighlight" onclick="closeNav()">Contact</a>
+</div>
+
+                                                             
+</div>
+<div class="background">
+  <div class="transbox">
+    <h1><p>Clonakilty <span class="highlight">Bookshop</span></p></h1>
+  </div>
+
+  
+<div id="menu">  
+  <div class="menu-container">
+    <a href="#menu" class="menu-button">Menu</a>
+      <div class="menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="add-a-book.html">Add Book</a>
+        <a href="UpdateRemove.php">Update/Delete Book</a>
+        <a href="select2.php">View All Books</a>
+        <a href="refinesearch.html">Search Book</a> 
+        <a href="custorder.php">Order Books</a>  
+      </div>
+  </div>
+</div>
+</div>
+<div id="box1">
+    <h3 style="text-align: center;">Book <span class="highlight">Categories</span></h3>
+    <ul>
+        <li><a href="#">Arts</a></li>
+        <li><a href="#">Biography</a></li>
+        <li><a href="#">Children</a></li>
+        <li><a href="#">Computing</a></li>
+        <li><a href="#">Cooking</a></li>
+    </ul>
+    <div id="viewmorelink"><a href="books.html">View More</a></div>
+</div>
+<div id="box2">
+      <h3 style="text-align: center;">Welcome to our <span class="highlight">New Website!</span></h3>
+      <p style="padding: 4%;">Welcome to our brand new <span class="highlight">responsive</span> website suitable for multiple platforms.
+      Our new website goes hand in hand with our new bookshop opening on <span class="highlight">12 Pearse Street,</span> Clonakilty on the <span class="highlight">8th of May.</span></p>
+ 
+      <img src="clonakilty.jpg" width="60%" height="120px" style="margin-left: 20%" alt="bookshop"> <!--https://pbs.twimg.com/profile_images/493028127300280321/1iiP5Xqf_400x400.jpeg!-->
+</div>
+
+
+<div id="box3">
+      <h3 style="text-align: center;">Opening <span class="highlight">Hours</span></h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">Day</th>
+            <th colspan="2">Hours</th>
+          </tr>
+          <tr>
+            <th>Open Times</th>
+            <th>Closing Times</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="days">Monday</td>
+            <td>9am</td>
+            <td>5pm</td>
+          </tr>
+          <tr>
+            <td class="days">Tuesday</td>
+            <td>9am</td>
+            <td>5pm</td>
+          </tr>
+          <tr>
+            <td class="days">Wednesday</td>
+            <td>9am</td>
+            <td>5pm</td>
+          </tr>
+          <tr>
+            <td class="days">Thursday</td>
+            <td>9am</td>
+            <td>5pm</td>
+          </tr>
+          <tr>
+            <td class="days">Friday - Saturday</td>
+            <td>12am</td>
+            <td>7pm</td>
+          </tr>
+          <tr>
+            <td class="days">Sunday</td>
+            <td>Noon</td>
+            <td>11pm</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="tablett"><p>View our timetable on your mobile device <a href="timetable.html">here</a></p></div>
+
+
+
+</div>
+
+
+
+<div id="box4">
+      <h3 style="text-align: center;">Contact <span class="highlight">Us</span></h3>
+      
+      <p style="margin-left: 5%;">Email: <a href="emailto:clonakiltybookshop@gmail.com">clonakiltybookshop@gmail.com</a><br>
+      Telephone:(077)0123456789</p>
+      <script>
+
+function success(position) {
+    document.getElementById ('visitus').style.display = 'block';
+	
+	document.getElementById ('coordlat').innerHTML =  position.coords.latitude;
+	document.getElementById ('coordlong').innerHTML = position.coords.longitude;
+	
+	document.getElementById ('distance2').innerHTML = getDistanceFromLatLonInKm(51.897871900000000000, -8.471087399999988000, 
+	position.coords.latitude, position.coords.longitude);
+	}
+	 
+</script>
+
+<div class="align">
+<p id="visitus">
+<p>You're only...<button style="border-radius: 5px; border: 1px solid orange;" onclick="navigator.geolocation.getCurrentPosition(success);">Calculate distance</button>
+<span class="highlight"><span id="distance2"> 0</span> miles</span> from us, Come visit!</p>
+ <p>Your current lat is: <span class="highlight"><span id="coordlat">0</span></span></p>
+<p>Your current long is: <span class="highlight"><span id="coordlong">0</span></span></p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.00432125288!2d-8.889465999999956!3d51.62313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x484456e84bfd07af%3A0x877efb2a22ada8!2sClonakilty+Bookshop!5e0!3m2!1sen!2sie!4v1429476013623" width="70%" height="120 auto;" frameborder="0" style="border:0; margin-left: 15%;"></iframe>
+                                                                                
+</div>
+</div>
+
+
+<div id="footer">
+    <div class="footerinfo">
+        Clonakilty Bookshop Limited&trade;<br>
+        Email: <a href="emailto:clonakiltybookshop@gmail.com">clonakiltybookshop@gmail.com</a><br>
+        Telephone:(077)0123456789<br><br>
+        
+        <div class="hidefb"><div class="fb-page" data-href="https://www.facebook.com/clonakiltybookshop" data-width="300" data-height="250" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/clonakiltybookshop"></blockquote></div></div></div>
+        <div class="hidefb"><a class="twitter-timeline" href="https://twitter.com/clonakiltybooks style=" position: absolute; top: 5%; " data-widget-id="588012825290874881">Tweets by @clonakiltybooks</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div> </div>
+    <div class="sitemap">
+        <h3>Sitemap</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Clonakilty Bookshop Facebook Page</a></li>
+            <li><a href="#">Clonakilty Bookshop Twitter Page</a></li>
+        </ul>      
+    </div>
+<div class="SitemapR">View the Sitemap</div>
+    
+</div>
+</div>
+
+
+
+
+
+
+
+  </body>
+</html>

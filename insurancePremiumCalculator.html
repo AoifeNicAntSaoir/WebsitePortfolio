@@ -1,0 +1,530 @@
+<!DOCTYPE html>                                                         
+<html lang='en'>
+  <head>
+    <title>Portfolio Aoife Sayers</title>
+    <meta charset='utf-8'>
+    <meta name='description' content='Personal website portfolio of a computing with multimedia student'>
+    <meta name='keywords' content='computing, multimedia, computer science, cs, portfolio, aoife, sayers, personal website itt, it tralee, institute of technology tralee, programming, java, c#, web development, responsive, mobile, web design, html5, css3, php, javascript, 2d animation, adobe'>
+    <meta name='author' content='Aoife Sayers'>
+    <meta name='robots' content='all'>
+    <meta name="viewport" content="width=device-width" />
+    
+    <link rel="shortcut icon" type="image/png" href="images\favicon.ico"/>
+    
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11027180; 
+var sc_invisible=1; 
+var sc_security="04248c30"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify visitor
+statistics" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/11027180/0/04248c30/1/"
+alt="shopify visitor statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+  
+  <script type="text/javascript">
+         var myVar;
+         
+         	var total = new Array(10);   
+  var tot=0;
+  var message;
+  var finalmessage; 
+  var i;
+   
+   
+    function calcPremium() {
+  
+                     if(document.question10form.claimsExcess[0].checked || document.question10form.claimsExcess[1].checked || document.question10form.claimsExcess[2].checked &&
+              !document.question8form.buildingsCover.value == "" || !document.question8form.buildingsCover.value<0 || !isNaN(document.question8form.buildingsCover.value) &&
+              document.question5form.smokeDetector[0].checked || document.question5form.smokeDetector[1].checked &&
+              document.question4form.houseAlarm[0].checked || document.question4form.houseAlarm[1].checked || document.question4form.houseAlarm[2].checked &&
+              document.question1form.ownership[0].checked || document.question1form.ownership[1].checked || document.question1form.ownership[2].checked) 
+              {
+                                  finalmessage += document.getElementById("final").innerHTML = "Premium Calculated...  " + 
+                                                    "\rOwn: €" + total[0] + 
+                                                    "\rType: €" + total[1] +
+                                                    "\rYears Old: €" + total[2] +
+                                                    "\rHouse Alarm: €" + total[3] +
+                                                    "\rSmoke Detectors: €" + total[4] +
+                                                    "\rLocation: €" + total[5] +
+                                                    "\rClaims Free: €" + total[6] +
+                                                    "\rBuildings Cover: €" + total[7] +
+                                                    "\rContents Cover: €" + total[8] +
+                                                    "\rClaims Excess: €" + total[9] +
+                                                    "\r\r\rTotal Premium Cost: €" + (total[0] + total[1] + total[2] + total[3] + total[4] + total[5] + total[6] + total[7] + total[8] + total[9]); 
+              }  
+                                     
+            //Question 10 
+           if(document.question10form.claimsExcess[0].checked || document.question10form.claimsExcess[1].checked || document.question10form.claimsExcess[2].checked)
+                {
+                        total[9] = parseInt(document.question10form.claimsExcess.value);    
+                          
+                        
+                              
+                                                    
+                                                                    
+                }
+          else  {
+                 
+                 finalmessage +=  document.getElementById("final").innerHTML = "Claims Excess radio not checked";
+                 finalmessage += document.getElementById("final").style.color = "red";
+                }
+             
+            //Question 8 & 9  
+           if(document.question8form.buildingsCover.value == "" || document.question8form.buildingsCover.value<0 || isNaN(document.question8form.buildingsCover.value))
+              {
+                finalmessage +=  document.getElementById("final").innerHTML = "Invalid entry for Buildings Cover";
+                finalmessage += document.getElementById("final").style.color = "red";
+              }
+          else 
+              {
+                total[7] = parseInt(document.question8form.buildingsCover.value);
+                total[8] = parseInt(document.question9form.contentsCover.value); 
+              }
+            
+          //Question 5 ,6, 7                
+          if(document.question5form.smokeDetector[0].checked || document.question5form.smokeDetector[1].checked)
+            {
+                total[4] = parseInt(document.question5form.smokeDetector.value);
+                total[5] = parseInt(document.question6form.location.value);
+                total[6] = parseInt(document.question7form.claimsFree.value); 
+            } 
+          else
+            {
+                finalmessage += document.getElementById("final").innerHTML = "Smoke Alarm radio button not checked";
+                finalmessage += document.getElementById("final").style.color = "red";
+            }
+              
+        //Question 4                
+        if(document.question4form.houseAlarm[0].checked || document.question4form.houseAlarm[1].checked || document.question4form.houseAlarm[2].checked)
+            {
+                total[3] = parseInt(document.question4form.houseAlarm.value);
+            }
+        else
+            {
+               finalmessage += document.getElementById("final").innerHTML = "House Alarm radio button not checked";
+               finalmessage += document.getElementById("final").style.color = "red";
+            }
+       
+       //Question 1, 2 & 3
+       if(document.question1form.ownership[0].checked || document.question1form.ownership[1].checked || document.question1form.ownership[2].checked )
+          {
+                total[0] = parseInt(document.question1form.ownership.value); 
+                total[1] = parseInt(document.question2form.propertyType.value);
+                total[2] = parseInt(document.question3form.yearsOld.value);
+          }
+        else {
+                finalmessage += document.getElementById("final").innerHTML = "Property owner ship radio button not checked";
+                finalmessage += document.getElementById("final").style.color = "red";
+             }              
+                                                                 
+        
+           
+    }
+         
+          function mobileOpen() {
+          window.open("index.html", "Home", "width=375,height=677");
+          alert("iPhone 6 screen dimensions in portrait")
+          }
+          
+          function tabletOpen() {
+          window.open("index.html", "Home", "width=768,height=1024");
+          alert("iPad screen dimensions in portrait");
+          }
+        
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";                                                 
+          document.getElementById("myDiv").style.display = "block";
+        }
+        
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        var captcha = Math.floor((Math.random() * 9999) + 1000);
+        
+        
+        
+
+        
+        
+       
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style type="text/css">
+  
+ @media all{
+  .content {
+    width:60%; 
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2% 5%;
+    background: WHITE;
+    border: 1px solid #CCC;
+    height: AUTO;
+    margin: 70px auto;
+    overflow: auto; 
+    z-index: -1;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+    font-weight: bold;
+    
+}
+
+td{
+width: 15%;
+padding-right: 5%;
+padding-top: 5%;}
+
+.home:hover, .about:hover, .contact:hover
+{
+border-bottom: 10px solid #068894;
+}
+
+
+
+    .page-wrap:after {
+      content: "";
+      display: block;
+    }
+    .site-footer, .page-wrap:after {
+      /* .push must be the same height as footer */
+        height: 172px; 
+    }
+    .site-footer {
+      background: #333;
+    }
+      
+    .tooltip {
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 0;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+.textboxstyle {
+border-radius: 2px;
+}   
+
+.textboxstyle:focus
+{ border: 2px solid green;
+padding-left: 8px;
+background-color: #ccc;}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 2.5em;
+    resize: none;
+}
+
+textarea:focus{
+border: 2px solid green;
+background-color: #ccc;}
+}
+ @media all and (max-width: 550px) {
+ 
+   .content {
+    width:90%;
+    } 
+    
+    .content p {
+    display: none;}
+ 
+ }
+ 
+ 
+  
+    
+  
+  </style>
+  </head>
+   <body onload="myFunction(); closeNav();" style="margin:0;">
+<div class="page-wrap">
+
+
+<div class="header">
+<div class="header-cont">
+<a href="index.html"><img src="images/myIcon.svg" alt="logo" top="0" width="100" style="margin-left: 75px; margin-top: -3px; position: absolute;"></a>
+<ul style="margin-left: 30%;">
+  <li><a class="home" href="index.html"> Home</a></li>
+  <li><a href="index.html#About" class="about">About</a></li>
+  <li class="dropdown">
+    <a href="index.html#Portfolio" class="dropbtn">Portfolio</a>
+    <div class="dropdown-content">
+      <a href="index.html#Programming">Programming</a>
+      <a href="index.html#WebDev">Web Development</a>
+      <a href="index.html#Design">Design</a>
+      <a href="index.html#">Networking</a>
+    </div>
+  </li>
+   <li><a class="contact" href="">Work Placement</a></li>
+  <li><a class="contact" href="index.html#Contact">Contact</a></li>
+</ul>
+
+
+</div>
+<ul>
+ <li>
+  <a class="menuButton" onclick="openNav()" href="#">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div></a>
+</li>
+</ul> 
+<div id="mySidenav" class="sidenav" style="width: 250px;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a style="margin-top: 15%;" onclick="closeNav()" class="homeSide" href="index.html#Home">Home</a>
+  <a href="index.html#About" class="aboutSide" onclick="closeNav()">About</a>
+  <a href="index.html#Portfolio" class="portfolioSide" onclick="closeNav()">Portfolio</a>
+      <a href="index.html#Programming" class="sideNavSub" onclick="closeNav()">Programming</a>
+      <a href="index.html#WebDev" class="sideNavSub" onclick="closeNav()">Web Development</a>
+      <a href="index.html#Design" class="sideNavSub" onclick="closeNav()">Design</a>
+  <a href="" class="fullMenu">Work Placement</a>
+  <a href="index.html#Contact" class="contactSide" onclick="closeNav()">Contact</a>
+</div>
+
+                                                             
+</div> 
+
+
+
+<div id="loader"></div>
+
+<div id="myDiv" class="animate-bottom">
+
+
+<div class="content">
+        
+
+        <h2 style="text-align: center;">Home Insurance Premium</H2>  
+        <img src="images\images.jpg" height="200" width="200" align="left">
+       <p style="color: #999999;"> <br> <br>At Sayers Insurance Ltd we aim to<br> provide you with competitive quotes<br> that won't be gotten anywhere else<br> on the insurance market. 
+        Lorem<br> ipsum dolor sit amet, consectetuer<br> adipiscing elit. Aenean commodo<br> ligula eget dolor. Aenean massa.<br> Cum sociis natoque penatibus et<br> magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
+
+          <table width="100%">
+            <tr >
+                <div id="q1">
+                      <form name="question1form"  action="" method="get">
+                 <td> Do you own the property or do you rent it from someone? </td>
+                  <td><input type="radio" name="ownership" value="50"> I own it and live in it   <br>
+                  <input type="radio" name="ownership" value="25"> I own it and it's a summer house <br>  
+                  <input type="radio" name="ownership" value="5"> I rent it from someone           <br>
+                 
+                </form> </td>
+                </div>
+                
+            </tr>
+            <tr>
+                <td><form name="question2form" action="" method="get">
+                    Type of Property: </td>
+                      <td><select class="textboxstyle" name="propertyType">
+                            <option value="100">Detatched</option>
+                            <option value="50">Semi-Detatched</option>
+                            <option value="65">Bungalow</option>
+                            <option value="40">Terraced</option>
+                            <option value="10">Apartment</option>
+                      </select>
+                </form></td> 
+            </tr>
+            <tr>               
+                                <br><br>
+                                
+               <td> <form name="question3form" action="" method="get">
+                    Years old:        </td>
+                    <td> <select class="textboxstyle" name="yearsOld">
+                            <option value="50"> Less than 1 year </option>
+                            <option value="75">Greater than 1 year and less than 5 years</option>
+                            <option value="90">Greater than 5 years and less than 15 years</option>
+                            <option value="100">Greater than 15 years</option>
+                      </select>     
+                </form>   </td>
+            </tr>
+            <tr>
+                                     
+                                        
+                 <td><form name="question4form" action="" method="get">
+                      House Alarm? <br>   </td>
+                      <td><input type="radio" name="houseAlarm" value="100"> No   <br>
+                      <input type="radio" name="houseAlarm" value="40"> Yes - Standard Alarm   <br>
+                      <input type="radio" name="houseAlarm" value="10"> No - Monitored Alarm <br>
+                </form>  </td>
+            </tr>  
+            <tr> 
+                                          
+                <td><form name="question5form" action="" method="get">
+                      At least 2 smoke detectors fitted?<br>   </td>
+                      <td><input type="radio" name="smokeDetector" value="50"> No   <br>
+                      <input type="radio" name="smokeDetector" value="10"> Yes <br>
+                </form>  </td>
+                                          
+            </tr>  
+            <tr>                            
+               <td> <form name="question6form" action="" method="get">
+                    Location:                    </td>
+                      <td><select  class="textboxstyle" name="location">
+                            <option value="50">Dublin</option>
+                            <option value="30">Cork, Limerick, Kerry</option>
+                            <option value="10">West of Ireland</option>
+                      </select>
+                </form> </td>
+             </tr>
+             <tr>                  
+                                    
+                                             
+                      <td><form name="question7form" action="" method="get">
+                    Claims Free:    </td>
+                     <td> <select class="textboxstyle" name="claimsFree">
+                            <option value="100">1 year</option>
+                            <option value="80">2 years</option>
+                            <option value="60">3 years</option>
+                            <option value="40">4 years</option>
+                            <option value="20">5+ years</option>  
+                      </select>
+                </form>  </td>
+            </tr>
+            <tr>
+                                  
+                             
+                                   
+                 <td><form name="question8form" action="" method="get">
+                     Buildings Cover: <div class="tooltip"><img name="help icon" height="40" width="40" alt="help icon" src="images\images.png">
+            <span class="tooltiptext">Cover for the cost of building</span>
+          </div> </td><td><input class="textboxstyle" type="text" name="buildingsCover">
+                    
+                </form> </td>
+                
+            </tr> 
+            <tr>                         
+                                                 
+                     <td> <form name="question9form" action="" method="get">
+                    Contents Cover: </td>
+                      <td><select class="textboxstyle" name="contentsCover">
+                            <option value="50">20,000</option>
+                            <option value="70">40,000</option>
+                            <option value="90">60,000</option>
+                            <option value="110">80,000</option>
+                            <option value="150">80,000+</option>  
+                      </select>
+                </form></td>
+              </tr> 
+              <tr> 
+              <td><form name="question10form" action="" method="get">
+                     Claims Excess:<br>   </td>
+                      <td><input type="radio" name="claimsExcess" value="30"> €250   <br>
+                      <input type="radio" name="claimsExcess" value="50"> €500 <br>
+                      <input type="radio" name="claimsExcess" value="70"> €1,000 <br></td>
+                </form>
+              </tr>
+          </table> 
+          
+              <form name="totalCostCheck" action="" method="get"> 
+                  <input type="button" style="margin-left: 40%; height: 80px; width: 200px; margin-top: 60px; border: 3px solid green; background-color: white; border-radius: 15px; color: black;" onclick="calcPremium()" value="Calculate Premium">
+              </form>
+              <p id="message" style="color: red; margin-top: 5%;">          </p>
+            
+            
+               <form name="totalPrem" action="" method="get"> 
+                  <textarea disabled="true" style=" font: Verdana; margin-top: 1%;" name="finalPremium" id="final" rows="30" cols="100"></textarea>
+              </form>
+                
+            </div>
+  
+
+      
+     
+    
+
+       
+       
+
+   
+</div>  
+</div> 
+
+
+
+    
+    
+<footer  class="site-footer">
+<p style="color: #ccc; text-align: center;">Aoife Sayers 2016-2017          </p> <br>
+
+<br>
+<div class="iconGroup" style="padding-left: 45%;">
+<a class="iconGroup" href="mailto:aoifesayers@gmail.com" target="_blank"> <img src="images\email.svg" alt="email icon"  height="40"></a>
+<a class="iconGroup" href="https://github.com/AoifeNicAntSaoir" target="_blank"><img src="images\github-logo.svg" alt="github icon" height="40"></a>
+<a class="iconGroup" href="https://www.linkedin.com/in/aoife-sayers-108a55a5?trk=hp-identity-name" target="_blank"><img  src="images\linkedin.svg" alt="linked in icon" height="40" width="40"></a>
+</div>
+</footer>
+    
+    
+
+  </body>
+</html>

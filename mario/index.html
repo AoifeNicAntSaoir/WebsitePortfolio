@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Super Simple Mario!</title>
+    <link rel="icon" href="Images/marioHead.ico" type="image/ico">
+    <meta charset='utf-8'>
+  
+  </head>
+  <style type="text/css">
+		.background{
+    		    position:fixed;
+    		   background:url(Images/marioBackground.jpg);
+           background-size: 800px 600px;
+    		  -webkit-animation:100s scroll infinite linear;
+    		  -moz-animation:100s scroll infinite linear;
+    		  -o-animation:100s scroll infinite linear;
+    		  -ms-animation:100s scroll infinite linear;
+    		  animation:100s scroll infinite linear;
+    		  top:0;
+    		  left:0;
+		}
+
+		@-webkit-keyframes scroll{
+		  100%{
+			     background-position: ;
+		  }
+		}
+                                                                        
+		@-moz-keyframes scroll{
+		  100%{
+			   background-position:-3000px 0px;
+		  }
+		}
+
+		@-o-keyframes scroll{
+		  100%{
+			   background-position:-3000px 0px;
+		  }
+		}
+
+		@-ms-keyframes scroll{
+		  100%{
+			   background-position:-3000px 0px;
+		  }
+		}
+
+		@keyframes scroll{
+		  100%{
+		  	background-position:-3000px 0px;
+		  }
+		}
+
+    @font-face {
+        font-family: 'superMarioFont';
+        src: url('Fonts/SuperPlumberBrothers.ttf');
+        font-weight: 400;
+        font-style: normal;
+        }
+
+h1 {
+      font-family: "superMarioFont", sans-serif;
+      color: black;
+  }
+}
+
+  
+  </style> 
+  <script type="text/javascript">
+  
+//General canvas set up
+      var canvas;
+      var canvasContext
+      var marioBackground;
+
+ //Screen Boleans
+      //Start Screen
+      var showingStartScreen = true; //Start Screen
+      var showingPlayScreen = false;  //Level 1 Screen1 
+      //Gameplay screens
+        var showPlay2 = false;      //Level1 Screen2
+        var showPlay3 = false;    //Level1 Screen3
+        var showPlay4 = false;    //Level1 Screen4
+        var showPlay5 = false; //Level 2 Screen 1
+        //Mushroom showing  
+        var mushShowing = false;
+      //End Screens
+        var gameOverScreen = false;
+        var hasWon = false;       
+//Title
+      var title;
+//Character Objects
+      //Mario
+      var gravity = 1;
+      var mario = {
+          spriteX: 10,
+          spriteY: 600-180,
+          marioImg: "",
+          speedX: 30,
+          speedY: 100,
+          marioHealth: 100
+      };
+      
+      var marioSource = 'Images/mario.png';      
+      //Goomba - enemy 
+      var goomba = {
+        goombaX: 800/2,
+        goombaY:   600-130,
+        goombaImg: "",
+        goombaSpeedX: 5
+        };
+      goombaSource = 'Images/goomba.png';
+      //Koopa  - enemy 
+      var koopa = {
+          koopaX: 800/2,
+          koopaY: 600-130,
+          koopaImg: "",
+          koopaSpeedX: 3
+      };
+      koopaSource = 'Images/koopa.png';   
+      //Mushroom 1up
+      var mushroom = {
+        mushroomX: 800-150,
+       mushroomY:   600-130,
+        mushroomSpeedX: 5
+        };
+      mushroomSource = 'Images/mushroom.png';
+      //Bricks
+      var bricks = new Image();
+       bricks.src = 'Images/bricks.jpg';
+      var qBoxX = 800-250;
+      var qBoxY = 600-300;
+      var qBoxSrc = 'Images/qBox.jpg';
+      //Castle
+      var castleImg = new Image();
+      castleImg.src = 'Images/castle.PNG';
+      //Flag
+      var flagImg = new Image();
+      flagImg.src = 'Images/flagPole.png';
+      //Scoring
+      var score = 0;
+      var level = 1;
+      //Sounds
+       var startScreenMusic = new Audio('Audio/titleMusic.wav');
+       var lifeLost = new Audio('Audio/loseALife.wav');
+       var marioHurt = new Audio('Audio/marioHurt.wav');
+       var marioHaha = new Audio('Audio/marioHaha.wav');
+       var coin = new Audio('Audio/coin.wav');
+       var deadMusic = new Audio('Audio/marioDead.wav');
+       var yoshi1Up = new Audio('Audio/yoshi1up.wav');
+       var yoshiHurt = new Audio('Audio/yoshiHurt.wav');
+       
+      
+   
+ //GAME LOOP  
+    window.onload = function(){
+    		var framesPerSecond = 30;
+    		canvas = document.getElementById('gameCanvas');
+    		canvasContext = canvas.getContext('2d');
+              
+        startScreen();
+            
+    		setInterval(function(){
+           //start screen
+            if(showingStartScreen){
+              title = new Image();
+              title.src = "Images/SuperMarioLogo.png"
+              canvasContext.drawImage(title, canvas.width/3, canvas.height/6, 300,200);  
+              canvasContext.font = "30pt Calibri";
+              canvasContext.fillStyle = "red";
+              canvasContext.fillText("Click to play", 300,400);
+          } //showing StartScreen //stop play music
+          
+          //play mode
+            if(showingPlayScreen){
+               startScreenMusic.pause();
+                startScreenMusic.currentTime = 0; 
+                level1();    
+                moveGoomba();
+            }//end if showingPlayScreen
+            
+            else if(showPlay2) {
+                 level1_1();
+            }
+            else if(showPlay3){
+                  level1_2();
+            }
+            else if(showPlay4){
+                  level1_3();
+            }
+            else if(showPlay5){
+                  level2();
+            } 
+            
+            
+           
+    		} ,1000/framesPerSecond);  
+    }//end window.onload
+//END GAME LOOP
+       
+
+//START SCREEN OF GAME            
+    function startScreen(evt){
+          startScreenMusic.play();
+          showingStartScreen = true;
+          canvas.addEventListener('click', function(){     //Click event handlers
+                if(showingStartScreen)
+                {
+                    alert("Get ready for level" + level + ". Click ok to begin");
+                }
+                else if(showingPlayScreen)                                                                                             
+                {
+                    alert('Game paused click ok to continue');
+                }
+                else if(gameOverScreen)
+                {
+                      alert('Game over!');
+                      location.reload();   //Reloads page to start Screen
+                }
+                else if(hasWon)
+                {
+                    alert("Get ready for level" + level);
+                    level2();
+                }
+                else if(level == 2){
+                    alert('Get to the end of the screen in 5 secs. Click ok to start!');   
+                    level2();
+                }
+                level1();
+                
+                //level2();
+              }//end funct         
+          );//end eventlist
+    } //end startScreen
+
+
+//LEVEL 1 OF GAME  
+    function level1(){      
+        showingPlayScreen = true;
+        showingStartScreen = false;
+        level = 1;
+        score = 0;
+        drawBackground();
+         
+         //Sprite Setup
+            //Goomba    
+              drawGoomba(goombaSource);    
+              moveGoomba(); 
+            //Mario
+             drawMario(marioSource); 
+             scores();
+            //Brick Drawing
+            drawBricks(qBoxSrc);
+       
+          //Mario collision with mushroom 
+        if (mushShowing &&
+            mario.spriteX < mushroom.mushroomX + 50 &&
+            mario.spriteX + 50 > mushroom.mushroomX &&
+            mario.spriteY < mushroom.mushroomY + 50 &&
+            mario.marioHealth +  mario.spriteY > mushroom.mushroomY) {
+                  mario.marioHealth = 100;
+                  goomba.goombaSpeedX = -goomba.goombaSpeedX; 
+                  scores();
+                  marioHaha.play();
+                  mushShowing = false;  
+                  score += 20;
+        }
+        
+         //mario hits ? box - Mushroom 1up appea                  
+         if (mario.spriteX <= qBoxX + 30 &&
+            mario.spriteX + 50 >= qBoxX &&
+            mario.spriteY <= qBoxY + 50) {
+                //Mushroom
+                  marioHaha.play();
+                  mushShowing = true;
+                  drawMushroom(mushroomSource);
+                  moveMushroom();
+        }  
+        
+        //Mushroom 1up showing - move the mushroom         
+        if(mushShowing)
+        {
+            drawMushroom(mushroomSource);
+            moveMushroom();
+        }  
+ 
+         //Mario collision detection with goomba 
+          if (mario.spriteX < goomba.goombaX + 50 &&
+            mario.spriteX + 50 > goomba.goombaX &&
+            mario.spriteY < goomba.goombaY + 50 &&
+            mario.marioHealth +  mario.spriteY > goomba.goombaY) {
+              loseLife();
+              goomba.goombaSpeedX = -goomba.goombaSpeedX; 
+              qBoxSrc = '';                                                                                                                 
+              drawBricks(qBoxSrc);
+          }
+         
+        //Next Screen                            
+       if(mario.spriteX >= canvas.width-100)
+        {
+            score+=10;
+            showingPlayScreen = false;
+           showPlay2 = true;
+            mario.spriteX = 10;                         
+        }     
+       
+    }  
+    
+   
+    
+    //Level 1 Screen 1
+    function level1_1(){ 
+        canvasContext.clearRect(0,0,canvas.width, canvas.height);    //Clear the canvas
+        level = 1;
+        //Set up screen
+        drawBackground();
+        scores();
+        //Set up sprites
+        //Mario
+        drawMario(marioSource);
+        //Koopa
+        drawKoopa(koopaSource);
+        moveKoopa();
+      
+        //Mario collision detection with koopa                          
+        if (mario.spriteX < koopa.koopaX + 50 &&
+            mario.spriteX + 50 > koopa.koopaX &&
+            mario.spriteY < koopa.koopaY + 50 &&
+            mario.marioHealth +  mario.spriteY > koopa.koopaY) {
+            loseLife();
+            koopa.koopaSpeedX = -koopa.koopaSpeedX; 
+        }   
+       
+        //Mario dead 
+        if(mario.marioHealth == 0)
+        {
+            deadMusic.play(); 
+            mario.spriteX-=200;
+        }  
+        
+        //mario at the end of the screen
+        if(mario.spriteX >= canvas.width-100)
+        {
+            score+=10;
+            showPlay2 = false;
+            showPlay3 = true;
+            mario.spriteX = 10;
+        }      
+    }
+    
+    
+      //Level 1 Screen 2
+        function level1_2(){ 
+            canvasContext.clearRect(0,0,canvas.width, canvas.height);    //Clear the canvas
+            level = 1;
+            //Set up screen
+            drawBackground();
+            scores();
+            //Set up Mario sprite
+            drawMario(marioSource);
+            //Set up enemies
+            drawKoopa(koopaSource);
+            moveKoopa();
+            drawGoomba(goombaSource);
+            moveGoomba();
+            //Mario collision detection with koopa                          
+             if (mario.spriteX < koopa.koopaX + 50 &&
+                mario.spriteX + 50 > koopa.koopaX &&
+                mario.spriteY < koopa.koopaY + 50 &&
+                mario.marioHealth +  mario.spriteY > koopa.koopaY) {
+                loseLife();
+                koopa.koopaSpeedX = -koopa.koopaSpeedX; 
+            } 
+            //Mario dead 
+            if(mario.marioHealth == 0)
+            { 
+                deadMusic.play(); 
+                mario.spriteX-=200;
+            }   
+            
+            //mario at the end of the screen
+            if(mario.spriteX >= canvas.width-100)
+            {
+                score+=10;
+                showPlay3 = false;
+                showPlay4 = true;
+                mario.spriteX = 10;
+            }      
+    }
+    
+    //Level 1 Screen 2
+    function level1_3() {
+            canvasContext.clearRect(0,0,canvas.width, canvas.height);    //Clear the canvas  
+            level = 1;
+             // Reach flag pole
+            if(mario.spriteX == 200 || mario.spriteX == 200-50 || mario.spriteX == 200+50 )    
+            {
+                console.log('you win');
+                jump();  
+                drawBackground();
+                scores();
+                drawWinScreen();
+                drawMario(marioSource);
+                score = 100;          
+                hasWon = true;         
+            }
+            drawBackground();
+            scores();
+            drawWinScreen();
+            drawMario(marioSource);
+           //mario at the end of the screen
+           if(mario.spriteX >= canvas.width-100)
+            {
+              score+=20;
+              showPlay4 = false;
+              showPlay5 = true;
+              mario.spriteX = 10;            
+            }  
+    }
+/*************************************************************************************/
+//END LEVEL 1    
+
+                                                                                                        
+//Level2
+function level2(){  
+        hasWon = false;
+        showPlay4 = false;       
+        level=2;  
+        //Set up play screen
+        showPlay5 = true;
+        drawBackground();  
+        drawBricks(qBoxSrc);
+        scores();  
+        //Goomaba
+        goomba.goombaSpeedX  = 7;
+        moveGoomba(); 
+        //Mario
+        drawMario(marioSource);  
+       
+        //mario x position at the end of the screen
+        if(mario.spriteX >= canvas.width-100)
+            {
+                score= 1000000;
+                canvasContext.fillStyle = "green";
+                alert('You won the entire game Congrats'); 
+                location.reload();             
+            }
+                    
+            //Mario collision with mushroom 
+            if (mushShowing &&
+                mario.spriteX < mushroom.mushroomX + 50 &&
+                mario.spriteX + 50 > mushroom.mushroomX &&
+                mario.spriteY < mushroom.mushroomY + 50 &&
+                mario.marioHealth +  mario.spriteY > mushroom.mushroomY) 
+                {
+                      mario.marioHealth = 100;
+                      goomba.goombaSpeedX = -goomba.goombaSpeedX; 
+                      scores();
+                      marioHaha.play();
+                      mushShowing = false;  
+                      score += 20;
+                }
+              
+               //mario hits ? box - Mushroom 1up appears                  
+               if (mario.spriteX <= qBoxX + 30 &&
+                  mario.spriteX + 50 >= qBoxX &&
+                  mario.spriteY <= qBoxY + 50) 
+                  {
+                      marioHaha.play();
+                      mushShowing = true;
+                      drawMushroom(mushroomSource);
+                      moveMushroom();
+                  }  
+              
+               //Mushroom         
+              if(mushShowing)
+                  {
+                        drawMushroom(mushroomSource);
+                        moveMushroom();
+                  }  
+       
+               //Mario collision detection with goomba 
+              if (mario.spriteX < goomba.goombaX + 50 &&
+                  mario.spriteX + 50 > goomba.goombaX &&
+                  mario.spriteY < goomba.goombaY + 50 &&
+                  mario.marioHealth +  mario.spriteY > goomba.goombaY) 
+                  {
+                        loseLife();
+                        goomba.goombaSpeedX = -goomba.goombaSpeedX; 
+                        qBoxSrc = '';
+                        drawBricks(qBoxSrc);
+                  }    
+      } //end level2
+
+
+
+/**************************************************************************************/
+//Sets up the background
+ function drawBackground()
+    {
+          marioBackground = new Image();
+          marioBackground.src = 'Images/marioBackground.jpg';
+          canvasContext.drawImage(marioBackground, 0, 0, canvas.width,canvas.height);   
+    }  //end drawBackground()
+    
+      
+    function drawBricks(qBoxSource)
+        {    
+          canvasContext.drawImage(bricks, canvas.width-250, qBoxY, 150, 50);
+          qBox = new Image();
+          qBox.src = qBoxSource;
+          canvasContext.drawImage(qBox, qBoxX, qBoxY, 30, 50);    
+        }
+      
+      function drawWinScreen()
+        {
+             canvasContext.drawImage(castleImg, canvas.width-250, canvas.height-315, 300, 250);
+             canvasContext.drawImage(flagImg, 200, canvas.height-530, 149, 450);
+        }
+      
+//Mushroom 1up
+    function drawMushroom(mushroomSource)
+        {
+            var m = mushroom;
+            m = new Image();
+            m.src = mushroomSource;
+            canvasContext.drawImage(m, mushroom.mushroomX, mushroom.mushroomY, 50,50);   
+        }  //end drawMushroom()
+    
+    function moveMushroom()
+        {
+           mushroom.mushroomX = mushroom.mushroomX + mushroom.mushroomSpeedX;     
+            if(mushroom.mushroomX > canvas.width)
+            {
+                mushroom.mushroomSpeedX = - mushroom.mushroomSpeedX;  //hit right wall, turn left
+            } 
+        }
+    
+
+//Goomba Opponent            
+    function drawGoomba(goombaSource)
+      {
+              goomba.goombaImg = new Image();
+              goomba.goombaImg.src = goombaSource;
+              canvasContext.drawImage(goomba.goombaImg, goomba.goombaX, goomba.goombaY, 50,50);   
+      }  //end drawGoomba()
+         
+    function moveGoomba()
+      {
+             goomba.goombaX = goomba.goombaX + goomba.goombaSpeedX;     
+             if(goomba.goombaX < 0){ 
+                goombaSource = 'Images/goomba.png';  //Goomba going right image
+                drawGoomba(goombaSource);    
+                goomba.goombaSpeedX = -goomba.goombaSpeedX;  //hit left wall, turn right
+              }
+              if(goomba.goombaX > canvas.width){
+              goombaSource = 'Images/goombaLeft.png';  //Goomba going left
+              drawGoomba(goombaSource);
+              goomba.goombaSpeedX = - goomba.goombaSpeedX;  //hit right wall, turn left
+              } 
+        }
+      
+
+
+//Koopa opponent
+      function drawKoopa(koopaSource)
+        {
+            koopa.koopaImg = new Image();
+            koopa.koopaImg.src = koopaSource;
+            canvasContext.drawImage(koopa.koopaImg, koopa.koopaX, koopa.koopaY, 50, 50);
+        }
+      
+    function moveKoopa()
+        {
+            koopa.koopaX = koopa.koopaX + koopa.koopaSpeedX;  
+            if(koopa.koopaX < 0)
+              { 
+                  koopaSource = 'Images/koopa.png';  //koopa going right image
+                  drawKoopa('Images/koopaLeft.png');    
+                  koopa.koopaSpeedX = -koopa.koopaSpeedX;  //hit left wall, turn right 
+              } 
+            if(koopa.koopaX > canvas.width)
+              {
+                  koopaSource = 'Images/koopaLeft.png';  //Goomba going left
+                  drawKoopa(koopaSource);
+                  koopa.koopaSpeedX = -koopa.koopaSpeedX;   //hit right wall, turn left
+              }        
+        }
+    
+
+/*************************************************************************************************************/
+//Score Info Text - change font !! 
+    function scores(){
+              //Score
+              canvasContext.font = '20pt Calibri';
+              canvasContext.fillStyle = 'white';
+              canvasContext.fillText('Score: ' + score, canvas.width-150,30);            
+              //Level   
+              canvasContext.font = '20pt Calibri';
+              canvasContext.fillStyle = 'white';
+              canvasContext.fillText('Level: ' + level, canvas.width-150,70);
+              //Lives Left
+              if(mario.marioHealth == 100){
+                  canvasContext.fillText('Lives Left: 2', canvas.width-150,50);
+              }
+              else if(mario.marioHealth == 50) {
+                  canvasContext.fillText('Lives Left: 1', canvas.width-150,50);    
+              }
+              else if(mario.marioHealth == 0){
+                  bricks.src =  " ";
+                  drawBricks(" ");
+                  showingPlayScreen = false;
+                  gameOverScreen = true;
+                  koopaSource = '';
+                  canvasContext.beginPath();
+                  canvasContext.rect(0, 0, canvas.width, canvas.height);
+                  canvasContext.fillStyle = "black";
+                  canvasContext.fill();
+                  canvasContext.fillText('Lives Left: 0', canvas.width-150,50);
+                  canvasContext.font = '40pt superMarioFont';
+                  canvasContext.fillStyle = 'red';
+                  canvasContext.fillText('Game Over', canvas.width/2-100,canvas.height/2); 
+                  canvasContext.font = '25pt Calibri';
+                  canvasContext.fillStyle = 'white';
+                  canvasContext.fillText('Click to restart or press spacebar', canvas.width/2-220,canvas.height/2+40); 
+                  level = 0;
+                }
+                
+        
+  }//END SCORES 
+
+
+//MARIO*******************************************************************************  
+    function drawMario(marioSource)
+         {      
+            mario.marioImg = new Image();
+            mario.marioImg.src = marioSource;
+            canvasContext.drawImage(mario.marioImg, mario.spriteX, mario.spriteY, mario.marioHealth,mario.marioHealth);   
+         } //end drawMario()
+      
+    function loseLife()
+      {
+            marioHurt.play();
+            mario.marioHealth -= 50;
+            checkHealth();
+            
+            
+      } //end loseLife()
+      
+      function checkHealth()
+      {          
+           if(mario.marioHealth >= 100){   //mario health full - readjust y position - full health
+                  mario.spriteY = 600-180;
+            }
+          else if(mario.marioHealth < 100){   //mario health full - readjust y position - less health
+                  mario.spriteY = 600-130;    
+          }    
+      } 
+      
+      function jump(){
+            mario.speedY = 100;
+            
+            if (mario.spriteY - mario.speedY > 0){
+            mario.spriteY -= mario.speedY;
+            setInterval(function(){
+                  checkHealth();
+            },1000);    
+        } 
+      }
+      
+      
+
+
+/************************************************************************************************************/
+    
+      
+              
+    
+    
+      
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Should do nothing if the key event was already consumed.
+  }
+  
+  switch (event.key) {
+      case "ArrowUp": 
+          jump();
+        break;
+      case "ArrowLeft":    // Left Arrow
+          marioSource = 'Images/marioLeft.png';
+          drawMario(marioSource);
+          if (mario.spriteX + mario.speedX > 0){
+                    mario.spriteX -= mario.speedX;
+          }  
+        break;
+      case "ArrowRight":      // Right arrow
+        marioSource = 'Images/mario.png';
+        drawMario(marioSource);
+          if (mario.spriteX + mario.speedX < canvas.width){
+                      mario.spriteX += mario.speedX;
+          }  
+        break;   
+      case " ":
+            if(showingPlayScreen){
+                  alert('Game paused click ok to continue');
+            }
+            else if(gameOverScreen){
+                alert('Ready to restart?');
+                location.reload();
+            }       
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+  // Consume the event to avoid it being handled twice
+  }
+  event.preventDefault();
+}, true);
+
+       
+    
+		
+  
+  </script>         
+  <body>
+   <h1>SUPER MARIO</h1>
+      <canvas id="gameCanvas" width="800" height="600" class="background" style="border: 1px solid #ccc;">
+          Sorry your browser does not support the canvas element.<br>
+          Try updating your browser/ use Chrome or Firefox
+      <canvas>
+      
+     
+
+  </body>
+</html>
