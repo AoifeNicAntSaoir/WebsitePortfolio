@@ -218,6 +218,7 @@ alt="shopify analytics"></a></div></noscript>
 			<br><br><a href="#week7" style="margin-left: 20%; margin-top: 250px;" class="tags">Week 7</a>
 					<a href="#week8" style="margin-left: 20px;" class="tags">Week 8</a>
 					<a href="#week9" style="margin-left: 20px;" class="tags">Week 9</a>
+					<a href="#week10" style="margin-left: 20px;" class="tags">Week 10</a>
             <br><br><a href="#Issues" class="tags" style="margin-left: 20%; margin-top: 250px;">Issues </a> 
                 <a href="#Software" class="tags" style="margin-left: 20px;" >Software </a> 
           
@@ -569,6 +570,33 @@ alt="shopify analytics"></a></div></noscript>
 		
 			<a href="https://github.com/AoifeNicAntSaoir/ImagesML/tree/master/ImgRecognition2/src" ><button style="margin-left: 47%; margin-top: 20px;" class="responsiveButtons">ImageML Repo</button></a>
 		</div>
+		<div class="portfolio1" style="padding-bottom: 70px; ">
+			<h2 style="padding-top: 70px; ">Image Comparison </h2>	
+			<img  alt="Normalized Correlation" src="images/wp/week10/normCorr.png" class="grow"> <br>
+			<img  alt="Normalized Correlation Equation" src="images/wp/week10/correq.png" class="grow"> <br>
+			<br><p class="moduleP ">Created a normalisedCorrelation(img1, img2) method. This metric allows to register objects whose intensity values are related by a linear transformation.<br>
+			I also looked at the Pattern Intensity and Mutual Information equations. I later realised that by using these equations for image comparison, it would not be a neural network
+			However, we can use these equations for testing the neural network predictions</p> 
+			<p class="tagAlign"><span class="tags">Normalized Correlation</span></p>
+			<h2 style="padding-top: 70px; ">More complex Pybrain Neural Network </h2>	
+			<img  alt="Normalized Correlation" src="images/wp/week10/ann_week10.png" class="grow"> <br>
+			<br><p class="moduleP ">We got the current test data of the neural networks accuracy to 100 and the test data at 82/83%, however, there is a problem with the predictions. The
+			problem with our logic may be difficult to resolve as we have to restructure the network. Also, reading in the image and testing it against the network was problematic as the 
+			dataset images are in integer format. We changed from the dataset sklearn.datasets.load_digits() to the MNIST original digits dataset</p>
+			<img alt="Prediction error Neural Network" src="images/wp/week10/predictProb.png" class="grow"><br>
+			<br><p class="moduleP ">I also created a matplotlib.pyplot line graph to demonstrate the training and test result's accuracy over the Epochs(times)</p>
+			<img alt="Matplotlib.pyplot" src="images/wp/week10/figure_1.png" class="grow"><br>
+			<a href="https://github.com/AoifeNicAntSaoir/CCSGroup/blob/aoife/workingDir/PybrainANN2.py" ><button style="margin-left: 47%; margin-top: 20px;" class="responsiveButtons">Current Neural Network working</button></a>
+			<p class="tagAlign"><span class="tags">Pybrain</span> <span class="tags">Matplotlib</span> <span class="tags">Training & Test Data</span></p>
+	
+			<h2 style="padding-top: 70px; ">Kerry Technology User Group Meeting: Octopus Deploy</h2>
+			<img  alt="Kerry Technology User Group Meeting: Octopus Deploy" src="images/wp/week10/ktug.png" class="grow"> <br>
+			<p class="moduleP"> I offered to talk about my individual project during placement on Octopus Deploy and Teamcity automated CI & CD pipeline on April 27th, IT Tralee. Hopefully, this will help improve my presentation skills further...! I attended the first meeting
+			at 6-8.30 on Thursday 23 March</p>
+			<p class="tagAlign"><span class="tags">Presentation</span> <span class="tags">CI - Teamcity</span> <span class="tags">CD - Octopus Deploy</span></p>
+		</div>
+		
+		
 
             
 </div>
