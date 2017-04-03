@@ -263,7 +263,7 @@ display: none;
 
 
 .welcome {
-background-image: url(bck.png);
+background-image: url(../bck.png);
 background-size: 100% 100%;
 background-repeat: no-repeat;
 background-attachment: fixed;

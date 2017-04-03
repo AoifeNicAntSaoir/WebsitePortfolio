@@ -1,3 +1,8 @@
 # Do not remove this line, otherwise mod_rewrite rules will stop working
 RewriteBase /
-IndexIgnore php/*.php
+IndexIgnore /php/*.php
+IndexIgnore /images/*.png
+AuthUserFile /php/restricted/.htpasswd
+AuthName "Restricted Area - log in please"
+AuthType Basic
+require user aoifesayers
