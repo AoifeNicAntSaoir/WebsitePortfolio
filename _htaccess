@@ -1,8 +1,10 @@
 # Do not remove this line, otherwise mod_rewrite rules will stop working
-RewriteBase /
-IndexIgnore /php/*.php
-IndexIgnore /images/*.png
-AuthUserFile /php/restricted/.htpasswd
-AuthName "Restricted Area - log in please"
-AuthType Basic
-require user aoifesayers
+## Enable Mod Rewrite, this is only required once in each .htaccess file
+RewriteEngine On 
+RewriteBase / 
+## Test for access to includes directory
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /includes/ .*$ [NC] 
+## Test that file requested has php extension 
+RewriteCond %{REQUEST_FILENAME} ^.+\.php$ 
+## Forbid Access 
+RewriteRule .* - [F,NS,L]

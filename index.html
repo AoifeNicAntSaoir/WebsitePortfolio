@@ -1,382 +1,1253 @@
-<!DOCTYPE html>                                                         
-<html lang='en'>
-  <head>
-    <title>Portfolio - Aoife Sayers</title>
-    <meta charset='utf-8'>
-    <meta name='description' content='Portfolio website of a Computing with  Multimedia student'>
-    <meta name='keywords' content='aoife, sayers, aoife sayers, computing, multimedia, computing with multimedia, computing with media development, computer science, cs, portfolio, personal website, itt, it tralee, institute of technology tralee, programming, java, c#, web development, responsive, mobile, web design, html5, css3, php, javascript, 2d animation, adobe'>
-    <meta name='author' content='Aoife Sayers'>
-    <meta name='robots' content='all'>
-    <meta name="viewport" content="width=device-width" />
-    
-    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
-  
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Portfolio of Aoife Sayers</title>
+		<meta name="description" content="Portfolio of a Computing with Multimedia Student">
+		<meta name="author" content="Aoife Sayers">
+		<meta name='keywords' content='computing, multimedia, computer science, cs, portfolio, aoife, sayers, personal website itt, it tralee, institute of technology tralee, programming, java, c#, web development, responsive, mobile, web design, html5, css3, php, javascript, 2d animation, adobe'>
+		<meta name='robots' content='all'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=11139305; 
-var sc_invisible=1; 
-var sc_security="1d3555f9"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="shopify
-analytics" href="http://statcounter.com/shopify/"
-target="_blank"><img class="statcounter"
-src="//c.statcounter.com/11139305/0/1d3555f9/1/"
-alt="shopify analytics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>   
-  <script src="jquery-3.0.0.js"></script>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="css/animations.css" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+		
+		<!--Slick CSS - Carousel -->
+		<link rel="stylesheet" type="text/css" href="./slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start -->
+		<!-- ================ --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<!-- header-left start -->
+						<!-- ================ -->
+						<div class="header-left clearfix">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<a href="#banner"><img id="logo" src="images/logo.png" alt="Worthy"></a>
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="site-name-and-slogan smooth-scroll">
+								<div class="site-name"><a href="#banner">Aoife Sayers</a></div>
+								<div class="site-slogan">Portfolio</div>
+							</div>
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-8">
+
+						<!-- header-right start -->
+						<!-- ================ -->
+						<div class="header-right clearfix">
+
+							<!-- main-navigation start -->
+							<!-- ================ -->
+							<div class="main-navigation animated">
+
+								<!-- navbar start -->
+								<!-- ================ -->
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li class="active"><a href="#banner">Home</a></li>
+												<li><a href="#about">About</a></li>
+												<li><a href="#skills">Skills</a></li>
+												<li><a href="#portfolio">Portfolio</a></li>
+												<li><a href="#contact">Contact</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<!-- banner start -->
+		<!-- ================ -->
+		<div id="banner" class="banner">
+			<div class="banner-image"></div>
+			<div class="banner-caption">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+							<h1 class="text-center"><span>Aoife Sayers</span></h1>
+							<p class="lead text-center">Portfolio of a Computing with Multimedia Student</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- banner end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="about" class="title text-center">About Me</h1>
+						<p class="lead text-center">Welcome to the portfolio of Aoife Sayers</p>
+						<div class="space"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<img src="images/section-image-1.png" alt="">
+								<div class="space"></div>
+							</div>
+							<div class="col-md-6">
+								<p>I am currently in my final year of Computing with Multimedia in the Institute of Technology, Tralee. I have a keen interest in the area of Software Development and Web Development.</p>
+								<p>Please feel free to take a look at some of my projects featured below in my <a href="#portfolio">portfolio</a>. The areas I focus are the following: </p>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Programming</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Databases</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Web Development</li>
+									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Multimedia</li>
+								</ul>
+							</div>
+						</div>
+						<div class="space"></div>
+						<h2>Modules Studied</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<p>Have a look at the modules I have studied in college to date as listed over the last four years.</p>
+							</div>
+							<div class="col-md-6">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+													1st Year
+												</a>
+											</h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body">
+												<p>Semester 1</p>
+												<ul>
+													<li>Learning At Third Level</li>
+													<li>Introduction to Programming</li>
+													<li>Web Design</li>
+													<li>Digital Imaging &amp; Digital Interfaces</li>
+													<li>Digital Media Technologies</li>
+													<li>Mathematics</li>
+												</ul>
+												<p>Semester 2</p>
+												<ul>
+													<li>Object Oriented Programming 1 </li>
+													<li>Web Design for Mobile Devices</li>
+													<li>Introduction to Mobile App Development</li>
+													<li>Operating Systems</li>
+													<li>Computer Architecture</li>
+													
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													2nd Year
+												</a>
+											</h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+												<p>Semester 1</p>
+												<ul>
+													<li>Software Engineering</li>
+													<li>Database Concepts</li>
+													<li>Object Oriented Programming 2</li>
+													<li>Dynamic Web: Opensource Approach</li>
+													<li>Design For Mobile Apps</li>
+													
+												</ul>
+												<p>Semester 2</p>
+												<ul>
+													<li>Network Fundamentals</li>
+													<li>Software Engineering Project</li>
+													<li>Animation &amp; Effects</li>
+													<li>Media Production</li>
+													<li>Object Oriented Programming 3</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													3rd Year
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<p>Semester 1</p>
+												<ul>
+													<li>Software Engineering Project</li>
+													<li>Introduction to Database Programming</li>
+													<li>Interactive Web Media</li>
+													<li>LAN Switching &amp; Wireless</li>
+													<li>Object Oriented Analysis & Design</li>
+													<li>Software Testing</li>
+													<li>Object Oriented Programming 4</li>
+												</ul>
+												<p>Semester 2</p>
+												<ul>
+													<li>Work Placement (12 Weeks minimum)</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+													4th Year
+												</a>
+											</h4>
+										</div>
+										<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+											<div class="panel-body">
+												<p>Semester 1</p>
+												<ul>
+													<li>Software Quality Assurance</li>
+													<li>Advanced Database Programming</li>
+													<li>Distributed Computing</li>
+													<li>Software Project Management</li>
+													<li>Final Year Project (Design)</li>
+													<li>Video Motion Graphics</li>
+												</ul>
+												<p>Semester 2</p>
+												<ul>
+													<li>Big Data</li>
+													<li>DevOps &amp; Application Stores</li>
+													<li>Steps To Success</li>
+													<li>Final Year Project (Implementation)</li>
+													<li>WAN Services &amp; Security</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section translucent-bg bg-image-1 blue">
+			<div class="container object-non-visible" data-animation-effect="fadeIn">
+				<h1 id="skills"  class="text-center title">Skills</h1>
+				<div class="space"></div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">Programming</h4>
+								<p>Experience in Object Oriented Programming with Java, C# and Python. Object Oriented Programming Concepts, GUI, Persistance and Collections. Studied data structures and algorithms.</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-code"></i>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">Databases</h4>
+								<p>Experience with SQL databases: Oracle, MySQL, SQL Server and PostgreSQL. Worked with NoSQL databases such as CouchDB, MongoDB, HBase, Redis, Neo4j &amp; Riak. </p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-database"></i>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">Software Testing</h4>
+								<p>Experience with various static and dynamic testing techniques and tools. Unit Testing, Integration Testing and Acceptance Testing.</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-bug"></i>
+							</div>
+						</div>
+					</div>
+					<div class="space visible-xs"></div>
+					<div class="col-sm-6">
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-html5"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Web Development</h4>
+								<p>Designing websites with HTML5 and CSS3. Worked with Wordpress .com & .org. JavaScript for form applications, JQuery to perform animations and PHP for dynamic websites.</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-paint-brush"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Design &amp; Multimedia</h4>
+								<p>Good working knowledge with media production. Worked with Adobe Photoshop, Illustrator and After Effects. Interface mockups, logo design, 2D motion graphics &amp; Photo editing </p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-cloud"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Networking</h4>
+								<p>Knowledge of Networking Fundamentals, Routing Concepts &amp; Protocols, LAN Switching &amp; Wireless, WAN Services &amp; Security.</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="default-bg space blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1 class="text-center">Let's Work Together!</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section">
+			<div class="container">
+				<h1 class="text-center title" id="portfolio">Portfolio</h1>
+				<div class="separator"></div>
+				<p class="lead text-center">Filter &amp; click on some of my projects to date.</p>
+				<br>			
+				<div class="row object-non-visible" data-animation-effect="fadeIn">
+					<div class="col-md-12">
+
+						<!-- isotope filters start -->
+						<div class="filters text-center">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#" data-filter="*">All</a></li>
+								<li><a href="#" data-filter=".web">Web Development</a></li>
+								<li><a href="#" data-filter=".programming">Programming</a></li>
+								<li><a href="#" data-filter=".databases">Databases</a></li>
+								<li><a href="#" data-filter=".multimedia">Multimedia</a></li>
+								
+
+								
+							</ul>
+						</div>
+						<!-- isotope filters end -->
+
+						<!-- portfolio items start -->
+						<div class="isotope-container row grid-space-20">
+							<div class="col-sm-6 col-md-3 isotope-item">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/CICD.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-1">
+											<i class="fa fa-search-plus"></i>
+											<span>DevOps</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-1">Automated CI/CD</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-1" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-1-label">Automated CI/CD</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>During my work placement, I implemented an automated Continuous Integration and Continuous Deployment Pipeline using Teamcity and Octopus Deploy. Every time a change was committed to Github, a build kicked off in Teamcity.
+														The Teamcity built the .sln file, ran NUnit tests, created and deployed a release to Octopus Deploy, pushed a release, deployed a release to an IIS server in a Staging Environments IIS Server (AWS VM) and the promoted the release to the Production Environment IIS Server (Azure VM)</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>Teamcity</li>
+															<li>Octopus Deploy</li>
+															<li>ASP.NET</li>
+															<li>NUnit</li>
+															<li>IIS</li>
+															<li>AWS &amp; Azure VMs</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														
+												  <section class="lazy slider" data-sizes="50vw">
+													
+													<div>
+													  <img data-lazy="images/CICD.PNG" data-srcset="images/CICD.PNG, images/CICD.PNG" data-sizes="190vw">
+													</div>
+													<div>
+													  <img data-lazy="images/TeamcityOctopus.png" data-srcset="images/TeamcityOctopus.png, images/TeamcityOctopus.png" data-sizes="100vw">
+													</div>
+												  </section>
+														
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item programming databases">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/couchDB.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-2">
+											<i class="fa fa-search-plus"></i>
+											<span>Programming</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">Java & CouchDB</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-labelledby="project-2-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header"> 
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-2-label">Java &amp; CouchDB</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Investigation of a document oriented NoSQL database. Accessed CouchDB through a RESTful interface via CURL to perform CRUD operations.</p>
+														<p>Created a Java Form application to perform CRUD operations and call on a MapReduce View.</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>Java</li>
+															<li>CouchDB</li>
+															<li>Ektorp</li>
+															<li>Curl</li>
+
+														</ul>
+														<p><ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/EktorpJavaCouchDB"><i class="fa fa-github"></i></a> EktorpJavaCouchDB Github Repo</li>
+														</ul></p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/couchDB.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item programming">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/fileServer.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-3">
+											<i class="fa fa-search-plus"></i>
+											<span>Programming</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">File Management System</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-3-label">File Management System</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>A Java Console (& form) Simple File Management Server with capabilities to Register, Login and Logout users. Each Users credentials are stored in a Users.txt file with their username and password. Each user also has their own folder for uploading and downloading files into.</p>
+														<p>I used Datagram Sockets in Java to develop this application.</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>Java</li>
+														</ul>
+														<p><ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/FileManagementSystem"><i class="fa fa-github"></i></a> FileManagementSystem Github Repo</li>
+														</ul></p>
+														
+													</div>
+													<div class="col-md-6">
+														<img src="images/fileServer.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item programming databases web development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/nodeMongo.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-4">
+											<i class="fa fa-search-plus"></i>
+											<span>Programming</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">NodeJS &amp; MongoDB </a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-4-label">NodeJS &amp; MongoDB</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Investigation of a document oriented NoSQL database. Accessed MongoDB through a RESTful interface via CURL to perform CRUD operations.</p>
+														<p>Created a NodeJS Server with Express JS to develop a UI Form application to perform CRUD operations and call on a MapReduce function.</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>MongoDB</li>
+															<li>NodeJS</li>
+															<li>Express JS</li>
+															<li>Curl</li>
+														</ul>
+														<p><ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/NodeMongoDB"><i class="fa fa-github"></i></a> NodeMongoDB Github Repo</li>
+														</ul></p>
+													</div>
+													<div class="col-md-6">
+														<img src="images/nodeMongo.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item programming databases">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/postitt.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-5">
+											<i class="fa fa-search-plus"></i>
+											<span>Programming</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">Post ITT</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-5-label">Post ITT</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>A PLSQL & C# & Entity Framework database driven and controlled college social media network completed as part of a 3rd year group project of 4. The database used was Oracle SQL</p>
+														<p>C# Entity Framework Windows form application that interfaces with and AWS Oracle SQL database. For Introduction to Database Programming module in the first semester of 3rd year. There were 3 phases of this group project</p>
+														<h4 class="modal-title">Phase 1</h4>
+														<ul>
+															<li>Designing a normalised relational/database schema</li>
+															<li>Creating class/ERD diagrams</li>
+															<li>Functional Decomposition Diagram</li>
+															<li>Enterprise Model</li>
+															<li>Data Dictionary</li>
+															<li>Business Rules</li>
+														</ul>
+														<h4 class="modal-title">Phase 2</h4>
+														<ul>
+															<li>SQL script corresponding to relational schema</li>
+															<li>Implement database in parallel - Amazon Web Services, SQL server</li>
+															<li>Populate tables with data</li>
+															<li>Triggers</li>
+															<li>Identify need for and implement views, indexes and sequences</li>
+															<li>Show triggers working</li>
+															<li>Group and individual reports</li>
+														</ul>
+														<h4 class="modal-title">Phase 3</h4
+														<ul>
+															<li>Create an application following a DAO objects carrying out CRUD operations</li>
+														</ul>
+														<h3>Technologies</h3>
+														<ul>
+															<li>Oracle SQL</li>
+															<li>C#</li>
+															<li>Entity Framework</li>
+															<li>Linq</li>
+
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/PostITTDB"><i class="fa fa-github"></i></a> PostITT Github Repo</li>
+														</ul>
+														
+													</div>
+													<div class="col-md-6">
+														<img src="images/postitt.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item web development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/InsurancePremiumCalc.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-6">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-6">Insurance Premium Calculator</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-labelledby="project-6-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-6-label">Insurance Premium Calculator</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Simple HTML5 form with JavaScript to calculate the cost of a Home Insurance Premium.</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>JavaScript</li>
+															<li>HTML5</li>
+															<li>CSS</li>
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/InsurancePremiumCalculator"><i class="fa fa-github"></i></a>Insurance Premium Calculator</li>
+															<li class="github"><a target="_blank" href="insurancePremiumCalculator.html"><i class="fa fa-link"></i></a>Insurance Premium Calculator - Live Version</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<img src="images/InsurancePremiumCalc.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item web development databases">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/php2.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-7">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">Dynamic Bookshop Website</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-7-label">Dynamic Bookshop Website</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Dynamic Bookshop website developed using PHP with a MySQL database. Create a book, Update a books details, Details, Search for a book and View all books in a database</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>PHP</li>
+															<li>MySQL</li>
+															<li>HTML5</li>
+															<li>CSS</li>
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/BookshopWebsite"><i class="fa fa-github"></i></a>Dynamic Bookshop Website Repo</li>
+															<li class="github"><a target="_blank" href="php/index.html"><i class="fa fa-link"></i></a>Dynamic Bookshop Website - Live Version</li>
+														</ul>
+													</div>
+													
+													<div class="col-md-6">
+														<img src="images/php2.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item web development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/pong.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-8">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">Pong Game</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-8-label">Pong Game</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>HTML5 Canvas game of the classic arcade game, Pong. Opponents ball movements are determined using AI algorithms</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>HTML5 Canvas</li>
+															<li>JavaScript</li>
+															<li>HTML5</li>
+															<li>CSS</li>
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/Pong"><i class="fa fa-github"></i></a>Pong Github Repo</li>
+															<li class="github"><a target="_blank" href="pong/"><i class="fa fa-link"></i></a>Pong Game - Live Version</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<img src="images/pong.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item web development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/mario.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-9">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">Super Mario Game</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-9-label">Super Mario Game</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>HTML5 Canvas game of the classic Super Mario</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>HTML5 Canvas</li>
+															<li>JavaScript</li>
+															<li>HTML5</li>
+															<li>CSS</li>
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/HTML5-Mario"><i class="fa fa-github"></i></a>Pong Github Repo</li>
+															<li class="github"><a target="_blank" href="mario/"><i class="fa fa-link"></i></a>Pong Game - Live Version</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<img src="images/mario.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item programming databases">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/kennels.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-10">
+											<i class="fa fa-search-plus"></i>
+											<span>Programming</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Dog Kennels System</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-10-label">Dog Kennels System</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>A Simple C# GUI windows form that interfaces with an Oracle SQL database to perform CRUD operations</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>C#</li>
+															<li>Oracle SQL</li>
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir/KennelSYS"><i class="fa fa-github"></i></a>KennelSYS Github Repo</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<img src="images/kennels.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item programming">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/JavaGUI.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-11">
+											<i class="fa fa-search-plus"></i>
+											<span>Programming</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">GUI Java Quiz</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-11-label">GUI Java Quiz</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Simple GUI Java Quiz completed on a JFrame</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>Java</li>
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href=https://github.com/AoifeNicAntSaoir/QuizGUI"><i class="fa fa-github"></i></a>Java GUI Quiz Github Repo</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<img src="images/JavaGUI.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item multimedia">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/syriaVMFX.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-12">
+											<i class="fa fa-search-plus"></i>
+											<span>Multimedia</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">Syria Motion Graphic</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-12-label">Syria Motion Graphic</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Video Motion Graphics 2D animation project on an assigned audio piece. Animated and drawn using Adobe After Effects and Adobe Illustrator</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>Adobe After Effects</li>
+															<li>Adobe Illustrator</li>
+														</ul>
+														<ul class="social-links">
+															<li class="youtube"><a target="_blank" href="https://youtu.be/ZpnLgVmU7MY"><i class="fa fa-youtube"></i></a>Syria Motion Graphic YouTube Link</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<iframe width="500" height="315" src="https://www.youtube.com/embed/ZpnLgVmU7MY" frameborder="0" encrypted-media" allowfullscreen></iframe>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							<div class="col-sm-6 col-md-3 isotope-item multimedia">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/typographyVMFX.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-13">
+											<i class="fa fa-search-plus"></i>
+											<span>Multimedia</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-13">Typography Motion Graphic</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-13" tabindex="-1" role="dialog" aria-labelledby="project-13-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-13-label">Typography Motion Graphic</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+													<p>Video Motion Graphics 2D animation project on an assigned audio piece. Animated and drawn using Adobe After Effects and Adobe Illustrator</p>
+													<p>The objective of this project was to create a motion graphic using only text with audio of my choice.</p>
+													<h3>Technologies</h3>
+													<ul>
+															<li>Adobe After Effects</li>
+														</ul>
+														<ul class="social-links">
+															<li class="youtube"><a target="_blank" href="https://youtu.be/SL7oB5ytvEc"><i class="fa fa-youtube"></i></a>Typography Motion Graphic YouTube Link</li>
+													</ul>
+													</div>
+													<div class="col-md-6">
+														<iframe width="560" height="315" src="https://www.youtube.com/embed/SL7oB5ytvEc" frameborder="0" encrypted-media" allowfullscreen></iframe>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item programming">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="images/neuralNet.png" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-14">
+											<i class="fa fa-search-plus"></i>
+											<span>Programming</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-14">MNIST Neural Network</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-14" tabindex="-1" role="dialog" aria-labelledby="project-14-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-14-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Multi-Layer Neural Network to identify the handwritten digits of the MNIST dataset using the Pybrain Python library and an accuracy of 98%.</p>
+														<p>Involved big data pre-processing. This was a group project as part of my work placement.</p>
+														<h3>Technologies</h3>
+														<ul>
+															<li>Python</li>
+															<li>Pybrain</li>
+															<li>Sci-kit learn</li>
+															<li>Numpy</li>
+															<li>Pandas</li>
+														</ul>
+														<ul class="social-links">
+															<li class="github"><a target="_blank" href=https://github.com/AoifeNicAntSaoir/CCSGroup"><i class="fa fa-github"></i></a>Neural Network to identify handwritten digits</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<img src="images/neuralNet.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+
+
+
+						</div>
+						<!-- portfolio items end -->
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<footer id="footer">
+
+			<!-- .footer start -->
+			<!-- ================ -->
+			<div class="footer section">
+				<div class="container">
+					<h1 class="title text-center" id="contact">Contact Me</h1>
+					<div class="space"></div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<p class="large">Please do not hesitate to contact me if you have any comments, questions or queries</p>
+								<ul class="list-icons">
+									<li><i class="fa fa-map-marker pr-10"></i> Kerry, Ireland</li>
+									<li><i class="fa fa-envelope-o pr-10"></i> aoifesayers@gmail.com</li>
+								</ul>
+								<ul class="social-links">
+									<li class="mail"><a target="_blank" href="https://github.com/AoifeNicAntSaoir"><i class="fa fa-envelope-o"></i></a></li>
+									<li class="github"><a target="_blank" href="https://github.com/AoifeNicAntSaoir"><i class="fa fa-github"></i></a></li>
+									<li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+									<ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<form role="form" id="footer-form">
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="name2">Name</label>
+										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="email2">Email address</label>
+										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="message2">Message</label>
+										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<input type="submit" value="Send" class="btn btn-default">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .footer end -->
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Copyright © 2018 <a target="_blank" href="http://aoifesayers.me">Aoife Sayers</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .subfooter end -->
+
+		</footer>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		
+		<!-- Backstretch javascript -->
+		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+		
+		<!-- Slick javascript -->
+		 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
-  
-         var myVar;
-     		    
-		     var i = 0;
-         
-                   function displayNextImage() {
-              x = (x === VMimages.length - 1) ? 0 : x + 1;
-              document.getElementById("img").src = VMimages[x];
-          }
+    $(document).on('ready', function() {
+       $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true,
+		dots: true,
+      });
+    });
+</script>
 
-          function displayPreviousImage() {
-              x = (x <= 0) ? VMimages.length - 1 : x - 1;
-              document.getElementById("img").src = VMimages[x];
-          }
+		
 
-          function startTimer() {
-              setInterval(displayNextImage, 3000);
-          }
-
-          var VMimages = [], x = -1;
-          VMimages[0] = "images/LogInScreen.png";
-          VMimages[1] = "images/Level1.png";
-          VMimages[2] = "images/SnowScene.png";
-		  VMimages[3] = "images/WinnerScreen.png";
-        
-          
-          function timer()    {          
-            var headerText = ["Portfolio of Aoife Sayers","BSc Computing with Multimedia", "3rd Year Student","Programming","Web Development","Multimedia","Design", "Database Administrator"];
-            var length = headerText.length;   
-            
-            document.getElementById("text").innerHTML = "<p class='changingText' style='color: #068894;  text-shadow: 2px 2px #ccc;'> " + headerText[i] + "</p>"; 
-            $(document).ready(function(){
-                 $("#text").fadeIn(2000,"linear");
-                 $("#text").fadeOut(2000,"linear");
-                  });
-                
-            if(i==(length-1)){
-              i=0;
-            }
-            else {
-              i++;
-            }
-          }
-          
-          function mobileOpen() {
-          window.open("index.html", "Home", "width=375,height=677");
-          alert("iPhone 6 screen dimensions in portrait")
-          }
-          
-          function tabletOpen() {
-          window.open("index.html", "Home", "width=768,height=1024");
-          alert("iPad screen dimensions in portrait");
-          }
-        
-        function myFunction() {
-            myVar = setTimeout(showPage, 3000);
-        }
-        
-        function showPage() {
-          document.getElementById("loader").style.display = "none";                                                 
-          document.getElementById("myDiv").style.display = "block";
-            document.getElementById("mySidenav").style.width = "0";
-        }
-        
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    
-       
-  </script>
-
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  </head>
-   <body onload="myFunction(); startTimer(); var newtimer = setInterval('timer()',4500);" style="margin:0;">
-<div class="page-wrap">
-
-
-<div class="header">
-<div class="header-cont">
-<a href="index.html"><img src="images/myIcon.svg" alt="logo" top="0" width="100" style="margin-left: 75px; margin-top: -3px; position: absolute;"></a>
-<ul style="margin-left: 30%;">
-  <li><a class="fullMenu" href="#Home"> Home</a></li>
-  <li><a href="#About" class="fullMenu">About</a></li>
-  <li class="dropdown">
-    <a href="#Portfolio" class="fullMenu">Portfolio</a>
-    <div class="dropdown-content">
-      <a href="#Programming">Programming</a>
-      <a href="#WebDev">Web Development</a>
-      <a href="#Design">Design</a>
-      <a href="#">Networking</a>
-    </div>
-  </li>
-   <li><a class="fullMenu" href="workPlacement.html">Work Placement</a></li>
-  <li><a class="fullMenu" href="#Contact">Contact</a></li>
-</ul>
-
-
-</div>
-<ul>
- <li>
-  <a class="menuButton" onclick="openNav()" href="#">
-        <div class="hamburger"></div>
-        <div class="hamburger"></div>
-        <div class="hamburger"></div></a>
-</li>
-</ul> 
-<div id="mySidenav" class="sidenav" style="width: 250px;">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a style="margin-top: 15%;" onclick="closeNav()" class="sideHighlight" href="#Home">Home</a>
-  <a href="#About" class="sideHighlight" onclick="closeNav()">About</a>
-  <a href="#Portfolio" class="sideHighlight" onclick="closeNav()">Portfolio</a>
-  <a href="#Programming" class="sideNavSub" onclick="closeNav()">Programming</a>
-  <a href="#WebDev" class="sideNavSub" onclick="closeNav()">Web Development</a>
-  <a href="#Design" class="sideNavSub" onclick="closeNav()">Design</a>
-  <a href="workPlacement.html" onclick="closeNav()">Work Placement</a>
-  <a href="#Contact" class="sideHighlight" onclick="closeNav()">Contact</a>
-</div>
-
-                                                             
-</div> 
-
-
-
-<div id="loader"></div>
-
-<div id="myDiv" class="animate-bottom">
-
-<div id="Home"><!--Main Body here!-->
-      <div class="welcome"> 
-          <div class="transparentBox"> 
-          <h1 style="color: #ccc; padding-top: 130px;">Hello World!</h1>
-          <div id="text"> </div>
-          </div>
-      </div>
-      
-     
-      <div class="welcome1">
-         <h2 style="color: #333; padding-top: 130px;"> Welcome to my portfolio</h2>
-         <p style="text-align: center;">BSc in Computing with Multimedia</p>
-         <div class="skillsWrap">
-         <div class="skillsBox">
-           <p><strong>Programming</strong></p>
-           <img style="margin-top: 15px;" src="images/programming.svg" alt="programming"> 
-        </div>
-        
-        <div class="skillsBox">
-          <p><strong>Web Development</strong></p>
-          <img style="margin-top: 15px;" src="images/code.svg" alt="code">
-        </div> 
-        <div class="skillsBox">
-          <p><strong>Multimedia</strong></p>
-          <img style="margin-top: 15px;" src="images/design.svg" alt="design">
-        </div>
-        <div class="skillsBox">
-          <p><strong>Databases</strong></p>
-        <img style="margin-top: 15px;" src="images/database.svg" alt="databases">
-        </div>
-        <div class="skillsBox">
-            <p><strong>Networking</strong></p>  
-             <img style="margin-top: 15px;" src="images/networking.svg" alt="networking">
-        </div>
-        </div>
-          
-      </div>
-</div>
-
-
-<div id="About">      
-      <div class="aboutBox">
-        <h1 style="padding-top: 130px;">About</h1>
-          <div class="code">
-          <pre>
-          <code>
-            <p class="codeHighlight"> &lt;about> </p>
-                <p style="text-indent: 50px;"><span class="codeHighlight"> &lt;name></span> Aoife Sayers <span class="codeHighlight">&lt;/name></span> </p>
-                 <p  style="text-indent: 50px;"><span class="codeHighlight">&lt;course></span> <a href="http://www.ittralee.ie/en/InformationAbout/Courses/SchoolofBusinessComputingandHumanities/Computing/TL812-BScHonsinComputingMediaDevelopment/">BSc Computing with Multimedia</a> <span class="codeHighlight">&lt;/course></span></p>
-                 <p  style="text-indent: 50px;"><span class="codeHighlight">&lt;college></span> <a href="http://www.ittralee.ie/en/">Institute of Technology, Tralee</a> <span class="codeHighlight">&lt;/college></span></p>
-                 <p  style="text-indent: 50px;"><span class="codeHighlight">&lt;location></span> <a href="https://goo.gl/maps/XEfh1KyDWk62">Co. Kerry, Ireland</a><span class="codeHighlight"> &lt;/location></span></p>
-                 <p style="text-indent: 50px;"><span class="codeHighlight">&lt;email></span> <a href="mailto:aoifesayers@gmail.com">aoifesayers@gmail.com</a> <span class="codeHighlight">&lt;/email></span></p>
-            <p style="padding-bottom: 5%;" class="codeHighlight">&lt;/about></p>
-          </code>
-          </pre>
-          </div>
-        
-      </div>
-</div>
-      
-      
-     
-    
-<div id="Portfolio">   
-    <div class="portfolioMain">  
-          <h1 style="color: #ccc; padding-top: 130px;">Portfolio</h1>
-      </div>
-  
-<div id="Programming">      
-      <div class="portfolio">  
-          <h3>Programming</h3>
-      </div>
- 
-      
-      <div class="portfolio1" style="padding-bottom: 70px; "> 
-            <h2 style="padding-top: 70px; ">Java</h2>
-             
-              <img alt="java quiz" src="images/java.png" class="grow" onmouseover="this.src='images/javamo.png';" onmouseout="this.src='images/java.png';"> 
-              <br><p class="moduleP ">GUI based Java quiz on a grid layout. JMenu & JMenu items capable of persistent storage using FileInputStream & FileOutputStreams </p>
-              <a href="jars/javaquiz.jar" download><button style="margin-left: 47%; margin-top: 20px;" class="responsiveButtons">Download Java Quiz .jar</button></a>
-              <p class="tagAlign"><span class="tags">Java</span></p>
-               
-              <img alt="java names program" src="images/java1.png"  class="grow" onmouseover="this.src='images/java1mo.png';" onmouseout="this.src='images/java1.png';"> 
-              <br><p class="moduleP ">GUI based Java program. Reading in from text file & saving using FileInputStream & FileOutputStream Classes </p>
-              <a href="jars/ListofNamesGuiPersistence.jar" download><button style="margin-left: 47%; margin-top: 20px;" class="responsiveButtons">Download Java Names .jar</button></a>
-              <p class="tagAlign"><span class="tags">Java</span></p>
-                                                                                                                                                                  
-              <h2 style="padding-top: 70px; ">C#</h2>
-             
-              <img alt="Kennel System" src="images/kennelsys.png"  class="grow" onmouseover="this.src='images/kennelsysmo.png';" onmouseout="this.src='images/kennelsys.png';"> 
-              <br><p class="moduleP ">Visual C# windows form which modelled a dog kennel system. Interfaced with Oracle Database performing insert, update delete queries</p>
-              <p class="tagAlign"><span class="tags">C#</span> <span class="tags">SQL</span></p>
-              
-              <h2 style="padding-top: 70px; ">Entity Framework</h2>
-             
-              <img alt="PostITT" src="images/entityFramework.png"  class="grow" onmouseover="this.src='images/moentityFramework.png';" onmouseout="this.src='images/entityFramework.png';"> 
-              <br><p class="moduleP ">Visual C# windows form utilising the Entity Framework to interface with a remote Oracle Database</p>
-              <p class="tagAlign"><span class="tags">C#</span> <span class="tags">Linq</span> <span class="tags">PLSQL</span></p>
-        
-
-      </div>  
- </div> 
-<div id="WebDev">      
-        <div class="portfolio">  
-          <h3>Web Development</h3>
-      </div>
-      
-      
-      <div class="portfolio1" style="padding-bottom: 80px;"> 
-          <h2 style="color: #333; padding-top: 80px; ">HTML5 & CSS3</h2>
-              <img alt="responsive" class="grow" src="images/responsivemo.png" onmouseover="this.src='images/responsive.png';" onmouseout="this.src='images/responsivemo.png';"> 
-              <p class="moduleP ">Responsive Web Design</p>    
-              <div class="responsiveView">
-              <br><p class="moduleP ">Click to view responsive versions of this page </p> 
-              <button style="margin-left: 34%; margin-top: 20px;" class="responsiveButtons"  onclick="mobileOpen();">Mobile </button>
-              <button class="responsiveButtons" onclick="tabletOpen();">Tablet</button> 
-              </div> 
-              <p class="tagAlign"><span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">JavaScript</span> <span class="tags">jQuery</span></p>
-              
-          <h2 style="color: #333; padding-top: 80px; ">HTML5 Canvas</h2>
-               <img alt="pong" class="grow" src="images/pong.png" onmouseover="this.src='images/mopong.png';" onmouseout="this.src='images/pong.png';" onclick="location.href='pong/index.html'">
-               <p class="moduleP ">HTML5 Pong Canvas game</p>
-               <p class="tagAlign"><span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">JavaScript</span> <span class="tags">Canvas</span></p>
-               <img alt="pong" class="grow" src="images/mario.png" onmouseover="this.src='images/momario.png';" onmouseout="this.src='images/mario.png';" onclick="location.href='mario/index.html'">
-               <p class="moduleP ">HTML5 Super Mario Game</p>
-               <p class="tagAlign"><span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">JavaScript</span> <span class="tags">Canvas</span></p>
-               
-          
-          <h2 style="color: #333; padding-top: 80px;">JavaScript</h2>
-              <img alt="javascript" src="images/javascript.png" class="grow" onmouseover="this.src='images/javascriptmo.png';" onmouseout="this.src='images/javascript.png';" onclick="location.href='insurancePremiumCalculator.html'"/>
-              <p class="moduleP">A HTML form that validates & calculates an insurance premium using Javascript</p>
-              <div class="tagAlign"> <span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">JavaScript</span> </div>
-          
-          <h2 style="color: #333; padding-top: 80px;">PHP</h2>
-              <img alt="php" class="grow" src="images/php.png" onmouseover="this.src='images/phpmo.png';" onmouseout="this.src='images/php.png'; " onclick="location.href='php/index.html'" />
-               <p class="moduleP ">A database driven bookshop website using PHP & MySQL</p>
-              <p class="tagAlign"><span class="tags">HTML5</span> <span class="tags">CSS3</span> <span class="tags">PHP</span> <span class="tags">MySQL</span></p>
-      </div>
-</div>
-<div id="Design">
-      <div class="portfolio">  
-          <h3>Design & Media</h3>
-      </div>
-        <div class="portfolio1">
-          <h2 style="color: #333; padding-top: 80px;">Digital Imaging & Digital Interfaces</h2>
-              <img  alt="digital imaging" src="images/digiImg.png" id="img" class="grow">
-              <button type="button" style="margin-left: 34%;" class="responsiveButtons" onclick="displayPreviousImage()">Previous</button>
-              <button type="button" class="responsiveButtons" onclick="displayNextImage()">Next</button>
-              <p class="moduleP ">Design for images and interfaces for screen media using Adobe Photoshop</p>
-              <p class="tagAlign"><span class="tags">PSD</span> <span class="tags">Photoshop</span> <span class="tags">UI</span></p>
-          
-          <h2 style="color: #333; padding-top: 80px;">Design for Mobile Devices</h2>
-             <img alt="illustrator" src="images/illustrator.png" onclick="location.href='https://invis.io/RE78603SA'; target='_blank';" class="grow" onmouseover="this.src='images/desmobmo.png';" onmouseout="this.src='images/illustrator.png';">
-              <p class="moduleP ">Vector graphics & user centred design specifically for mobile devices using Adobe Illustrator. Prototype hosted on Invision</p>
-              <p class="tagAlign"><span class="tags">AI</span> <span class="tags">Illustrator</span> <span class="tags">Invision</span></p>
-          
-    
-      </div>
-</div>
-</div>
-      
-           
-
-
-<div id="Contact">
-    <div class="box3">
-        <h1 style="padding-top: 130px;">Contact</h1>
-            <div class="iconGroup" style="margin-left: 40%; margin-top: 50px;">
-              <a href="mailto:aoifesayers@gmail.com" target="_blank"> <img src="images/email.svg" alt="email icon"  height="80"></a>
-              <a href="https://github.com/AoifeNicAntSaoir" target="_blank"><img src="images/github-logo.svg" alt="github icon" height="80"></a>
-              <a href="https://www.linkedin.com/in/aoife-sayers-108a55a5?trk=hp-identity-name" target="_blank"><img  src="images/linkedin.svg" alt="linked in icon" height="80" width="80"></a>
-            </div>
-      </div>
-      
-      <div class="box3content">
-        <h2 style="color: #333; padding-top: 130px; "> Comments, Critiques or Questions?</h2>
-            <form name="feedbackform" action="php/feedback.php" method="post" class="form1">
-              <table width="50%">
-                <tr><td>Name:*</td><td> <input type="text" name="name" style="border-radius: 5px; border: 2px solid #068894;  padding: 5px 5px;" placeholder="Joe Soap" maxlength="30" required></td></tr>
-                <tr><td>Email:*</td><td><input type="email" name="email" style="border-radius: 5px; border: 2px solid #068894;  padding: 5px 5px;" placeholder="jsoap@example.com" maxlength="30" required></td></tr> 
-                <tr><td>Comment*</td> <td><textarea name="comment" style="border-radius: 5px; border: 2px solid #068894;  padding: 5px 5px;" placeholder="What... Why... How..." maxlength="50" rows="3" required cols="20"></textarea></td></tr>
-                <tr><td colspan="2"> <input type="submit" name="submitButton" class="insComment" style="margin-left: 35%;" value="Submit"></td></tr>
-                </table>
-            </form>
-      </div>  
-      
-      
-        
-        
- 
-      </div>  
-  
-       
-
-   
-</div>  
-</div> 
-
-
-
-    
-    
-<footer  class="site-footer">
-<p style="color: #ccc; text-align: center;">Aoife Sayers 2016-2017          </p> <br>
-
-<br>
-<div class="iconGroup" style="padding-left: 45%;">
-<a class="iconGroup" href="https://mail.google.com/mail/?view=cm&fs=1&to=aoifesayers@gmail.com&su=Aoife Sayers' Portfolio" target="_blank"> <img src="images/email.svg" alt="email icon"  height="40"></a>
-<a class="iconGroup" href="https://github.com/AoifeNicAntSaoir" target="_blank"><img src="images/github-logo.svg" alt="github icon" height="40"></a>
-<a class="iconGroup" href="https://www.linkedin.com/in/aoife-sayers-108a55a5?trk=hp-identity-name" target="_blank"><img  src="images/linkedin.svg" alt="linked in icon" height="40" width="40"></a>
-</div>
-</footer>
-    
-    
-
-  </body>
+	</body>
 </html>
